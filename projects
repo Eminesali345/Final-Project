@@ -33,14 +33,14 @@ public static void main(String[] args) {
 		driver = new ChromeDriver();
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("https://demoqa.com/login");
+		driver.get("https://demoqa.com/logout");
 		
 		//Instantiating Logout & Profile page using initElements()
-		Logout loginPg = PageFactory.initElements(driver, Login.class);
+		Logout logoutPg = PageFactory.initElements(driver, Logout.class);
 		Profile profilePg = PageFactory.initElements(driver, Profile.class);
 		 
 		//Using the methods created in pages class to perform actions
-		logouPg.Logout_Action("---your username---", "---your password---");
+		loginPg.Login_Action("---your username---", "---your password---");
 		profilePg.verifyUser("---your username---");
 		profilePg.logout_Action();
 		 
