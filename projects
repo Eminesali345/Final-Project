@@ -16,7 +16,7 @@ public class Logout _Skillo {
 		logout.enterUsername("gunjankaushik");
 		logout.enterPassword("Password@123");
 		
-		logout.clickLogin();
+		logout.clickLogout();
 		
 		
 		
