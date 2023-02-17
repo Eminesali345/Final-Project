@@ -1,0 +1,50 @@
+public class Logout _Skillo {
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver");
+		WebDriver driver = new ChromeDriver();
+		
+		HomePage home = new HomePage(driver);
+		
+		LoginPage login = new LoginPage(driver);
+		
+		Dashboard dashboard = new Dashboard(driver);
+		
+		home.clickLogin();
+		
+		login.enterUsername("gunjankaushik");
+		login.enterPassword("Password@123");
+		
+		login.clickLogin();
+		
+		
+		
+		System.out.println("The page heading is --- " +dashboard.getHeading());
+		
+		
+		dashboard.clickLogout();
+	}
+
+}
+
+public static void main(String[] args) {
+		
+		driver = new ChromeDriver();
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("https://demoqa.com/login");
+		
+		//Instantiating Logout & Profile page using initElements()
+		Logout loginPg = PageFactory.initElements(driver, Login.class);
+		Profile profilePg = PageFactory.initElements(driver, Profile.class);
+		 
+		//Using the methods created in pages class to perform actions
+		logouPg.Logout_Action("---your username---", "---your password---");
+		profilePg.verifyUser("---your username---");
+		profilePg.logout_Action();
+		 
+		driver.quit();		
+	}
+
+}
