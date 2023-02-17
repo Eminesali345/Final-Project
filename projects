@@ -11,12 +11,12 @@ public class Logout _Skillo {
 		
 		Dashboard dashboard = new Dashboard(driver);
 		
-		home.clickLogin();
+		home.clickLogout();
 		
-		login.enterUsername("gunjankaushik");
-		login.enterPassword("Password@123");
+		logout.enterUsername("gunjankaushik");
+		logout.enterPassword("Password@123");
 		
-		login.clickLogin();
+		logout.clickLogin();
 		
 		
 		
